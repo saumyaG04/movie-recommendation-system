@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+</head>
+<body>
+    <h1>Movie Recommendation System</h1>
+    <form action="/recommend" method="post">
+        <label for="movie">Enter a Movie:</label>
+        <input type="text" id="movie" name="movie" required>
+        
+        <label for="method">Select Recommendation Method:</label>
+        <select id="method" name="method" required>
+            <option value="content">Content-Based Filtering</option>
+            <option value="collaborative">Collaborative Filtering</option>
+        </select>
+        
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    {% if recommendations %}
+        <h2>Recommendations:</h2>
+        <ul>
+            {% for rec in recommendations %}
+                <li>{{ rec }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
