@@ -20,7 +20,7 @@ This repository contains the implementation of a movie recommendation system usi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/movie-recommendation-system.git
+   git clone https://github.com/saumyaG04/movie-recommendation-system.git
    ```
 2. Navigate to the project directory:
    ```bash
